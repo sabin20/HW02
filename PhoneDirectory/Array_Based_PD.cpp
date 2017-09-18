@@ -170,3 +170,23 @@ void Phone_Directory::reallocate()
 	// Set the_directory to point to the new directory.
 	the_directory = new_directory;
 }
+
+Phone_Directory::Directory_Entry::Directory_Entry()
+{
+	_name = "John Smith";
+	_number = "509-111-2345";
+} // Default no-argument constructor
+
+Phone_Directory::Directory_Entry::Directory_Entry(std::string the_name, std::string the_number) {
+	_name = the_name;
+	_number = the_number;
+}
+string Phone_Directory::Directory_Entry::get_name() const {
+	return _name;
+}
+string Phone_Directory::Directory_Entry::get_number() const {
+	return _number; // method not implemented yet
+}
+void Phone_Directory::Directory_Entry::set_number(const std::string& new_number) {
+	_number = new_number;
+}
