@@ -117,7 +117,7 @@ string Phone_Directory::remove_entry(const string& name) // Completed by Sabin S
 {
 	int index = find(name);
 	if (index != -1) {
-		string number = the_directory[index].get_number;
+		string number = the_directory[index].get_number();
 		for (int i = index; i < size - 1; i++){
 			the_directory[i] = the_directory[i + 1]; 
 		}
