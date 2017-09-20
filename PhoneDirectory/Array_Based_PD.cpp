@@ -5,6 +5,7 @@
 
 #include "Array_Based_PD.h"
 #include <string>
+#include <iostream> // remove later
 #include <fstream>
 #include <istream>
 #include <ostream>
@@ -34,6 +35,7 @@ Phone_Directory::~Phone_Directory()
 void Phone_Directory::load_data(const string& source_name)
 {
 	// Remember the source name for use by save.
+	std::cout << source_name << endl;
 	this->source_name = source_name;
 	// Create an input stream for this file.
 	ifstream in(source_name.c_str());
